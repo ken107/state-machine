@@ -1,0 +1,27 @@
+{
+  "name": "@lsdsoftware/state-machine",
+  "version": "1.0.0",
+  "description": "Make implementing state machines less error prone",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "node dist/index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsdsoftware/state-machine.git"
+  },
+  "keywords": [
+    "state machine"
+  ],
+  "author": "Hai Phan <hai.phan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lsdsoftware/state-machine/issues"
+  },
+  "homepage": "https://github.com/lsdsoftware/state-machine#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  }
+}
