@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.makeStateMachine = void 0;
 function makeStateMachine(states) {
+    var _a, _b;
     let currentStateName = "IDLE";
+    (_b = (_a = states[currentStateName]).onTransitionIn) === null || _b === void 0 ? void 0 : _b.call(_a);
     let lock = 0;
     return {
         trigger(eventName, ...args) {

@@ -7,6 +7,7 @@ interface State {
 
 export function makeStateMachine(states: {IDLE: State, [stateName: string]: State}) {
   let currentStateName = "IDLE"
+  states[currentStateName].onTransitionIn?.()
   let lock = 0
   return {
     trigger(eventName: string, ...args: any) {
