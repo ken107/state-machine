@@ -1,5 +1,5 @@
-import { makeStateMachine } from "."
 import * as assert from "assert"
+import { makeStateMachine } from "."
 
 const sm = makeStateMachine({
   IDLE: {
@@ -7,7 +7,7 @@ const sm = makeStateMachine({
       return "PLAYING"
     },
     stop() {},
-    goto(state: string) {
+    goto(state: "STUCK") {
       return state
     }
   },

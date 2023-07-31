@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _1 = require(".");
 const assert = require("assert");
+const _1 = require(".");
 const sm = (0, _1.makeStateMachine)({
     IDLE: {
         play() {

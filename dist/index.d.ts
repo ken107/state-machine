@@ -1,12 +1,7 @@
-type EventHandler = (...args: any) => string | void;
-interface State {
-    [eventName: string]: EventHandler;
-}
-export declare function makeStateMachine(states: {
-    IDLE: State;
-    [stateName: string]: State;
-}): {
-    trigger(eventName: string, ...args: any): void;
-    getState(): string;
+type EventHandler<StateName> = (...args: any) => StateName | void;
+export type State<StateName extends string, EventName extends string> = Partial<Record<EventName | "onTransitionIn", EventHandler<StateName>>>;
+export declare function makeStateMachine<StateName extends string, EventName extends string>(states: Record<StateName | "IDLE", State<StateName, EventName>>): {
+    trigger(eventName: EventName, ...args: any): void;
+    getState(): StateName | "IDLE";
 };
 export {};
