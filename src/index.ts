@@ -1,5 +1,5 @@
 
-type EventHandler<StateName> = (...args: any) => StateName|void
+type EventHandler<StateName> = (...args: any) => StateName|void|undefined
 
 export type State<StateName extends string, EventName extends string> = Partial<Record<EventName|"onTransitionIn", EventHandler<StateName>>>
 

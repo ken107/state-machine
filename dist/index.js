@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.makeStateMachine = void 0;
+exports.makeStateMachine = makeStateMachine;
 function makeStateMachine(states) {
     var _a, _b;
     let currentStateName = "IDLE";
@@ -33,4 +33,3 @@ function makeStateMachine(states) {
         }
     };
 }
-exports.makeStateMachine = makeStateMachine;
